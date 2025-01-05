@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transaksi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="menu">
+        <a href="Beranda.html">Beranda</a>
+        <a href="Profil.html">Profil</a>
+        <a href="Buku.html">Koleksi Buku</a>
+        <a href="Transaksi.html">Transaksi</a>
+        <a href="Peminjam.html">Daftar Peminjam</a>
+        <a href="login.html">Login</a>
+      </div>
+    <div class="container">
+        <h3>Transaksi</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Buku</th>
+                    <th>Peminjam</th>
+                    <th>Tanggal Pinjam</th>
+                    <th>Tanggal Kembali</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Padang Bulan</td>
+                    <td>Nawal</td>
+                    <td>2025-01-01</td>
+                    <td>2025-01-07</td>
+                    <td>Dipinjam</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Padang Bulan</td>
+                    <td>Nawal</td>
+                    <td>2025-01-01</td>
+                    <td>2025-01-07</td>
+                    <td>Dikembalikan</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bidadari Bermata Bening</td>
+                    <td>Okta</td>
+                    <td>2025-01-02</td>
+                    <td>2025-01-09</td>
+                    <td>Dipinjam</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bidadari Bermata Bening</td>
+                    <td>Okta</td>
+                    <td>2025-01-02</td>
+                    <td>2025-01-09</td>
+                    <td>Dikembalikan</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Photo Travel</td>
+                    <td>Ajeng</td>
+                    <td>2025-01-02</td>
+                    <td>2025-01-09</td>
+                    <td>Dipinjam</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Photo Travel</td>
+                    <td>Ajeng</td>
+                    <td>2025-01-02</td>
+                    <td>2025-01-09</td>
+                    <td>Dikembalikan</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <h3>Tambah Transaksi</h3>
+        <div class="form-section"></div>
+            <form action="transaksiForm" method="post">
+                <label for="nama-buku">Nama Buku</label>
+                <input type="text" id="nama-buku" name="nama_buku" placeholder="Masukkan nama buku" required>
+
+                <label for="nama-peminjam">Nama Peminjam</label>
+                <input type="text" id="nama-peminjam" name="nama_peminjam" placeholder="Masukkan nama peminjam" required>
+
+                <label for="tangal-pinjam">Tanggal Pinjam</label>
+                <input type="date" id="tangal-pinjam" name="tanggal_pinjam" required>
+
+                <label for="tanggal-kembali">Tanggal Kembali</label>
+                <input type="date" id="tangal-kembali" name="tanggal_kembali" required>
+
+                <button type="submit">Tambah Transaksi</button>
+            </form>
+        </div>
+        <br>
+        <br>
+        <footer> &copy;Perpustakaan Kona : @2025</footer>
+    </div>
+    </nav>
+    <script src="script.js"></script>
+  
+</body>
+</html>

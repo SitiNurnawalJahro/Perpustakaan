@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftra Peminjam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <a href="Beranda.html">Beranda</a>
+            <a href="Profil.html">Profil</a>
+            <a href="Buku.html">Koleksi Buku</a>
+            <a href="Transaksi.html">Transaksi</a>
+            <a href="Peminjam.html">Daftar Peminjam</a>
+            <a href="login.html">Login</a>
+          </div>
+
+          <div class="root" >
+            <tr>
+            <td>
+            <h2>Perpustakaan Kona</h2> 
+            </td>
+            </tr>
+    
+          </div>
+
+    <h1>Daftar Peminjam</h1>
+    <table id="peminjamTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Peminjam</th>
+                <th>Email</th>
+                <th>Nomor Telepon</th>
+                <th>Alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nawal</td>
+                <td>Nawal@gmail.com</td>
+                <td>081234567890</td>
+                <td>Bekasi Barat</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Okta</td>
+                <td>Okta@gmai.com</td>
+                <td>081345678901</td>
+                <td>Jakarta Selatan</td>
+            </tr>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ajeng</td>
+            <td>Ajeng@gmai.com</td>
+            <td>08197780878980</td>
+            <td>Jakarta Barat</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p>Tambah Peminjam Baru</p>
+    <form id="peminjamForm">
+        <label for="nama">Nama: </label>
+        <input type="text" id="nama" name="nama" required>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required>
+        <label for="telepon">Nomor Telepon: </label>
+        <input type="text" id="telepon" name="telepon" required>
+        <label for="alamat">Alamat: </label>
+        <input type="text" id="alamat" name="alamat" required>
+        <button type="button" onclick="tambahPeminjam()">Tambah Peminjam</button>
+    </form>
+
+    <script>
+        function tambahPeminjam() {
+            // Ambil data dari form
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const telepon = document.getElementById('telepon').value;
+            const alamat = document.getElementById('alamat').value;
+
+            if (!nama || !email || !telepon || !alamat) {
+                alert("Semua field harus diisi!");
+                return;
+            }
+
+            // Dapatkan tabel dan jumlah baris saat ini
+            const table = document.getElementById('peminjamTable').getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+
+            // Tambahkan baris baru ke tabel
+            const newRow = table.insertRow(rowCount);
+            newRow.insertCell(0).innerText = rowCount + 1; // Kolom No
+            newRow.insertCell(1).innerText = nama; // Kolom Nama
+            newRow.insertCell(2).innerText = email; // Kolom Email
+            newRow.insertCell(3).innerText = telepon; // Kolom Telepon
+            newRow.insertCell(4).innerText = alamat; // Kolom Alamat
+
+            // Bersihkan form setelah data ditambahkan
+            document.getElementById('peminjamForm').reset();
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+     <footer> &copy;Perpustakaan Kona : @2025</footer>
+     </nav>
+</body>
+</html>
